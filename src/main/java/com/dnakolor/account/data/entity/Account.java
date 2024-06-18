@@ -36,6 +36,9 @@ public class Account implements UserDetails {
         return authorities;
     }
 
+    public boolean isPurchased() {
+        return purchaseTime.after(new Date(System.currentTimeMillis()));
+    }
     @Override
     public String getPassword() {
         return username;
