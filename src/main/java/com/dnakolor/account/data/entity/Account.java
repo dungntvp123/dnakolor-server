@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -24,7 +25,7 @@ public class Account implements UserDetails {
     @Column(unique = true)
     private String username;
     private String password;
-    private boolean isPurchase;
+    private Date purchaseTime;
     private String roles;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

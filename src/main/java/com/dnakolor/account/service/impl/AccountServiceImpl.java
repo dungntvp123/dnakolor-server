@@ -4,6 +4,7 @@ import com.dnakolor.account.data.dto.request.ChangePasswordRequestDto;
 import com.dnakolor.account.data.dto.request.GoogleAuthRequestDto;
 import com.dnakolor.account.data.dto.request.RegisterRequestDto;
 import com.dnakolor.account.data.dto.request.UsernamePasswordAuthRequestDto;
+import com.dnakolor.account.repository.AccountRepository;
 import com.dnakolor.account.service.AccountService;
 import com.dnakolor.account.service.AuthService;
 import com.dnakolor.account.utils.JwtUtils;
@@ -24,8 +25,11 @@ public class AccountServiceImpl implements AccountService, AuthService {
     private JwtUtils jwtUtils;
     @Autowired
     private PasswordEncoder passwordEncoder;
+    @Autowired
+    private AccountRepository accountRepository;
     @Override
     public ResponseEntity<?> changePassword(String accountId, ChangePasswordRequestDto requestDto) {
+
         return null;
     }
 
@@ -65,6 +69,7 @@ public class AccountServiceImpl implements AccountService, AuthService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
         return null;
     }
 }
