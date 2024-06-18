@@ -8,7 +8,6 @@ import org.springframework.context.annotation.PropertySource;
 @SpringBootApplication(exclude = SecurityAutoConfiguration.class)
 @PropertySource({"classpath:database.properties"})
 public class AccountApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(AccountApplication.class, args);
 	}
